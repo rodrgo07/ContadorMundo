@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            320deg,
+            #a50cea,
+            #9109d7,
+            #7c06c4,
+            #6803b0,
+            #53009d
+          )
+          fixed;
+        overflow: hidden;
+        color: white;
+      }
+
+      #texto {
+        margin-bottom: 20px;
+        font-size: 30pt;
+        cursor: default;
+        transition: 0.5s ease;
+        align-items: center;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        height: 40%;
+        text-align: center;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 24pt;
+        border-radius: 15px;
+        background: rgb(255, 255, 255, 0.5);
+        color: white;
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+      }
+      
+      .btns {
+        position: relative;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 20pt;
+        font-weight: 700;
+        margin-block: 20px;
+      }
+      
+      .btns button {
+        width: 100px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        outline: none;
+        border: none;
+        border-radius: 18px;
+        cursor: pointer;
+        transition: 0.4s ease;
+        color: #53009d;
+        background: rgb(255, 255, 255, 0.7);
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+      }
+      
+      .btns button:hover {
+        transform: scaleX(1.1);
+        font-size: 25pt;
+      }
+      
+      #mundo {
+        position: absolute;
+        top: 0;
+        left: 80px;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: -2000;
+      }
+
+      #reset{
+        width: 85%;
+      }
+      
+      </style>
+    <div class="all">
+      <img id="mundo" src="Dr._Mundo_Render.webp" alt="Mundo" />
+      <main id="container">
+        <h1 id="texto">Escreva o valor final:</h1>
+        
+        <input id="numQuest" type="number" />
+
+        <div class="btns">
+          <button id="1" onclick="contador1()">1</button>
+          <button id="2" onclick="contador2()">2</button>
+          <button id="3" onclick="contador3()">3</button>
+        </div>
+        <div class="btns">
+          <button id="reset" onclick="reset()">Reset</button>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const texto = document.getElementById("texto");
+      let num = document.getElementById("numQuest");
+
+      function contador1() {
+        let inst = 0;
+        console.clear();
+        while (inst <= parseInt(num.value)) {
+          console.log(inst);
+          inst = inst + 1;
+        }
+      }
+      function contador2() {
+        let inst = 0;
+        console.clear();
+        while (inst <= parseInt(num.value)) {
+          console.log(inst);
+          inst = inst + 2;
+        }
+      }
+      function contador3() {
+        let inst = 0;
+        console.clear();
+        while (inst <= parseInt(num.value)) {
+          console.log(inst);
+          inst = inst + 3;
+        }
+      }
+      function reset() {
+        let inst = 0;
+        console.clear();
+      }
+      
+    </script>
+  </body>
+</html>
